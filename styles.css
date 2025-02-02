@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--very-light-gray);
+  flex-direction: column;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
+  text-align: left;
+}
+
+.one,
+.two,
+.three {
+  flex: 1;
+  height: 450px;
+}
+
+.one {
+  background-color: var(--bright-orange);
+}
+
+.two {
+  background-color: var(--dark-cyan);
+}
+
+.three {
+  background-color: var(--very-dark-cyan);
+}
+
+.contents {
+  display: flex;
+  margin: 3rem;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 35px;
+}
+
+.text {
+  color: rgb(236, 214, 214);
+}
+
+.btn {
+  background-color: #fff;
+  margin-top: 3rem;
+  justify-content: left;
+  padding: 10px 20px;
+  width: 150px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-color: transparent;
+}
+
+.one .btn {
+  color: var(--bright-orange);
+}
+
+.one .btn:hover {
+  background-color: var(--bright-orange);
+  color: rgb(236, 214, 214);
+  border: 2px solid #fff;
+}
+
+.two .btn {
+  color: var(--dark-cyan);
+}
+
+.two .btn:hover {
+  background-color: var(--dark-cyan);
+  color: rgb(236, 214, 214);
+  border: 2px solid #fff;
+}
+
+.three .btn {
+  color: var(--very-dark-cyan);
+}
+
+.three .btn:hover {
+  background-color: var(--very-dark-cyan);
+  color: rgb(236, 214, 214);
+  border: 2px solid #fff;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    max-width: 375px;
+  }
+
+  .one,
+  .two,
+  .three {
+    height: auto;
+    padding: 20px 15px;
+  }
+
+  .contents {
+    margin: 2rem;
+    text-align: left;
+    align-items: left;
+  }
+
+  .contents .text{
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .btn {
+    align-self: left;
+    margin-top: 1rem;
+  }
+}
